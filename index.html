@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <!-- <a href="https://www.google.com">Kunjungi Google.com</a> -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Khusus Melinsky Nurs</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fecfef);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: fadeIn 2s ease-in;
+        }
+        .text-block {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin: 20px 0;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            animation: slideUp 1s ease-out;
+        }
+        .image {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            margin: 20px 0;
+            transition: transform 0.3s;
+        }
+        .image:hover {
+            transform: scale(1.05);
+        }
+        .hearts {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        .heart {
+            position: absolute;
+            color: #ff6b9d;
+            font-size: 2em;
+            animation: fall 5s linear infinite;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes fall {
+            0% { transform: translateY(-100vh) rotate(0deg); }
+            100% { transform: translateY(100vh) rotate(360deg); }
+        }
+        button {
+            background: #ff6b9d;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin: 20px;
+        }
+        button:hover {
+            background: #ff4a7a;
+        }
+    </style>
+</head>
+<body>
+    <div class="hearts" id="hearts"></div>
+    <div class="container">
+        <h1>Selamat Datang di Dunia Melinsky Nurs!</h1>
+        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Bunga Romantis" class="image">
+        
+        <div class="text-block">
+            <p>Hai Melinsky Nurs, kamu tahu nggak sih, kalau aku pertama kali lihat kamu, rasanya seperti dunia berhenti berputar dan hanya ada kamu yang bersinar seperti bintang di langit malam yang penuh dengan glitter dan confetti? Kamu itu seperti kopi pagi yang bikin bangun tidur dengan senyum lebar, tapi juga seperti es krim yang meleleh di tangan, bikin aku panik tapi bahagia. Aku nggak bisa bayangin hidup tanpa kamu, karena kamu itu segalanya – dari aroma parfummu yang bikin aku mabuk kepayang, sampai cara kamu ketawa yang kayak suara burung phoenix yang bangkit dari abu, tapi lebih lucu karena kamu sering ketawa sampai ngakak sendiri pas lihat meme kucing.</p>
+            
+            <p>Bayangin aja, Melinsky Nurs, kalau kamu itu seperti superhero yang punya kekuatan super untuk bikin hati aku berdegup kencang kayak drum di konser rock, tapi juga bisa bikin aku tenang kayak meditasi di pantai. Kamu cantik banget, sampai-sampai aku sering mimpiin kamu jadi ratu di kerajaan cinta, dengan mahkota dari bunga mawar yang nggak pernah layu. Tapi jangan salah, kamu juga konyol abis – kayak waktu kamu coba masak tapi hasilnya kayak eksperimen sains yang gagal, tapi aku tetep makan sambil ketawa sampai perut sakit. Kamu itu campuran sempurna antara malaikat dan badut, yang bikin aku jatuh cinta setiap detik, bahkan pas kamu lagi tidur dan ngorok kayak mesin cuci yang rusak.</p>
+            
+            <p>Aku sayang kamu, Melinsky Nurs, lebih dari sayangnya aku ke pizza dengan topping ekstra keju. Kamu itu cahaya di kegelapan, tapi juga lampu strobo di pesta yang bikin aku pusing tapi excited. Kalau dunia ini kayak film, kamu adalah ending yang happy ever after, tapi dengan twist lucu kayak karakter kartun yang jatuh dari tangga tapi tetep bangun dengan senyum. Aku nggak mau kehilangan kamu, karena hidup tanpa kamu kayak makan mie tanpa garam – hambar dan nggak ada rasa. Jadi, maukah kamu jadi pacarku selamanya, dan kita bikin cerita cinta yang penuh tawa dan air mata bahagia?</p>
+        </div>
+        
+        <img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Pasangan Lucu" class="image">
+        
+        <p>Klik tombol di bawah kalau kamu siap ketawa dan jatuh cinta lebih dalam!</p>
+        <button onclick="alert('Hahaha, aku sayang kamu Melinsky Nurs! 😂💖')">Ya, Bikin Ngakak Dong!</button>
+    </div>
+
+    <script>
+        // Animasi jatuh hati
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDelay = Math.random() * 5 + 's';
+            document.getElementById('hearts').appendChild(heart);
+            setTimeout(() => heart.remove(), 5000);
+        }
+        setInterval(createHeart, 300);
+    </script>
+</body>
+</html>
